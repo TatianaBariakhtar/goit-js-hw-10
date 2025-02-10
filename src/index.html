@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    
+    <title>My Project</title>
+    <meta name="description" content="Короткий опис сторінки для SEO." />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <include src="./partials/header.html"></include>
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <include src="./partials/vite-promo.html"></include>
+      <include src="./partials/badges.html"></include>
     </main>
 
-    <load src="./partials/footer.html" />
+    <include src="./partials/footer.html"></include>
 
     <script type="module" src="./main.js"></script>
+    <script nomodule>
+      alert("Ваш браузер не підтримує модулі. Оновіть його!");
+    </script>
+
+    <noscript>
+      <p>Для роботи сайту увімкніть JavaScript.</p>
+    </noscript>
   </body>
 </html>
